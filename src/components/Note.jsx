@@ -12,7 +12,7 @@ function Note(props)
             </p>
             <button onClick={ () => {
                 props.onDelete(props.id);
-            }}>delete</button>
+            }}>-</button>
         </div>
     )
 }

@@ -45,7 +45,7 @@ function CreateArea(props){
                         newItem.title = "";
                         newItem.content = "";
                         event.preventDefault();
-                    }}>Add</button>
+                    }}>+</button>
                 </div>    
                 
             </form>

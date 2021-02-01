@@ -43,7 +43,6 @@ function App()
             <div className="note-container">
                 
                 {notes.length !== 0 ? notes.map(note => {
-                    {/* console.log(note.id); */}
                     return (
                         <Note 
                             id={note.id}
