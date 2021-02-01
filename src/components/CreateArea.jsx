@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 function CreateArea(props){
     let [newItem, setNewItem] = useState({
@@ -13,6 +14,7 @@ function CreateArea(props){
             setNewItem( (prevItem) => {
                 return (
                     {
+                        id: uuidv4(),
                         title: value,
                         content: prevItem.content
                     }
@@ -23,6 +25,7 @@ function CreateArea(props){
             setNewItem( (prevItem) => {
                 return (
                     {
+                        id: uuidv4(),
                         title: prevItem.title,
                         content: value
                     }

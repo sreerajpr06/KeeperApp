@@ -12,16 +12,28 @@ function App()
 
     function onAdd(newNote){
         
-        console.log(newNote);
+        // console.log(newNote);
         setNotes( (prevNotes) => {
             return [...prevNotes, 
                 {
+                    id: newNote.id,
                     title : newNote.title,
                     content: newNote.content
                 }
             ];
         })
         
+    }
+
+    function onDelete(id) {
+        // console.log(id);
+        setNotes( (prevNotes) => {
+            return (
+                prevNotes.filter( (note) => {
+                    return note.id !== id;
+                })
+            );
+        })
     }
 
     return (
@@ -31,26 +43,17 @@ function App()
             <div className="note-container">
                 
                 {notes.length !== 0 ? notes.map(note => {
+                    {/* console.log(note.id); */}
                     return (
                         <Note 
-                            key={note.key}
+                            id={note.id}
+                            key={note.id}
                             title={note.title}
                             content={note.content}
+                            onDelete={onDelete}
                         />
                     )
                 }) : null }
-
-            
-{/* 
-                {notes.map(note => {
-                    return (
-                        <Note 
-                            key={note.key}
-                            title={note.title}
-                            content={note.content}
-                        />
-                    )
-                })} */}
                 
             </div>
         </div>
