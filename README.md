@@ -5,7 +5,7 @@ A clone of Google Keep.
 ## Setting Up
 
 Goto the project directory. For installing dependencies, run: 
-#### `npm init`
+#### `npm install`
 
 In the project directory, you can run:
 
